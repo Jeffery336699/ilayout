@@ -7,7 +7,7 @@ void main() {
 }
 
 Widget _buildByLayout(BuildContext context, BoxConstraints constraints) {
-  print(constraints);
+  print(constraints); // BoxConstraints(w=450.0, h=800.0)
   return const ColoredBox(
     color: Colors.white,
     child: Align(

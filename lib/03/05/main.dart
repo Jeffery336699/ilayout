@@ -130,7 +130,7 @@ class LoopLayout extends StatelessWidget {
 洗却凡世几闲尘。
 时逢雷霆风会雨，
 应乘扶摇化入云。
-        """,
+        """.trim(),
           style: TextStyle(
             fontSize: 16,
             shadows: [

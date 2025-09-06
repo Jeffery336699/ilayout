@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:ilayout/ext.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -68,6 +71,8 @@ class VerticalDirectionFlex extends StatelessWidget {
     ),
   );
 
+  VerticalDirectionFlex({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -90,5 +95,5 @@ class VerticalDirectionFlex extends StatelessWidget {
         direction: Axis.horizontal,
         mainAxisSize: mode,
         children: [blueBox, redBox, yellowBox, greenBox],
-      );
+      ).border(); //加了边款才能看得清范围多大
 }

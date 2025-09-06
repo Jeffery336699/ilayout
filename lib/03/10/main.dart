@@ -52,6 +52,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     if (image != null) {
+      ///这里很重要的细节是必须与图片的真实宽高保持一致，这样索引才能对上
       return NXMLayout(
         n: 47,
         m: 62,

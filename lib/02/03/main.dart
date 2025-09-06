@@ -18,7 +18,10 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       home: LayoutBuilder(
         builder: (context, constraints) {
+          ///根传递下来的虽然值相等，当不是同一对象（如果是同一个对象，那不你就能随便更改了🤣）
+          // false
           print(identical(constraints,rootBoxConstraints));
+          // true
           print(constraints==rootBoxConstraints);
           return Container(color: Colors.blue);
         }

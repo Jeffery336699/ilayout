@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
           children: [
             LayoutBuilder(
                 builder: (_, c) {
+                  //BoxConstraints(0.0<=w<=Infinity, 0.0<=h<=800.0)
                   print(c);
                   return Container(
                     color: Colors.blue,

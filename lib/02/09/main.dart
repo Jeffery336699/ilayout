@@ -9,63 +9,45 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-      MaterialApp(
-        home:
-        // Flex(
-        Stack(
-          fit: StackFit.expand,
-          children: [
-            LayoutBuilder(
-                builder: (_, constraints) {
-                  print(constraints);
-                  return Container(
-                    color: Colors.yellow,
-                    width: 140,
-                    height: 140,
-                  );
-                }
-            ),
-            LayoutBuilder(
-                builder: (_, constraints) {
-                  // print(constraints);
-                  return Container(
-                    color: Colors.green,
-                    width: 110,
-                    height: 110,
-                  );
-                }
-            ),
-            LayoutBuilder(
-                builder: (_, constraints) {
-                  // print(constraints);
-                  return Container(
-                    color: Colors.red,
-                    width: 80,
-                    height: 80,
-                  );
-                }
-            ),
-            Container(
-              color: Colors.blue,
-              width: 50,
-              height: 50,
-            ),
-          ],
-        ),
-      );
+    return MaterialApp(
+      home: Stack(
+        // 传递约束为父类的宽松约束，BoxConstraints(0.0<=w<=450.0, 0.0<=h<=800.0)
+        // fit: StackFit.loose,
+
+        // 传递约束为最大约束的紧约束，BoxConstraints(w=450.0, h=800.0)
+        fit: StackFit.expand,
+        children: [
+          LayoutBuilder(builder: (_, constraints) {
+            print(constraints);
+            return Container(
+              color: Colors.yellow,
+              width: 140,
+              height: 140,
+            );
+          }),
+          LayoutBuilder(builder: (_, constraints) {
+            print(constraints);
+            return Container(
+              color: Colors.green,
+              width: 110,
+              height: 110,
+            );
+          }),
+          LayoutBuilder(builder: (_, constraints) {
+            print(constraints);
+            return Container(
+              color: Colors.red,
+              width: 80,
+              height: 80,
+            );
+          }),
+          Container(
+            color: Colors.blue,
+            width: 50,
+            height: 50,
+          ),
+        ],
+      ),
+    );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
             ),
             LayoutBuilder(
                 builder: (_, constraints) {
+                  // BoxConstraints(0.0<=w<=Infinity, 0.0<=h<=800.0)
                   print(constraints);
                   return Container(
                     color: Colors.red,
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
             ),
             LayoutBuilder(
                 builder: (_, constraints) {
+                  // BoxConstraints(0.0<=w<=Infinity, 0.0<=h<=800.0)
                   print(constraints);
                   return Container(
                     color: Colors.green,
@@ -44,6 +46,7 @@ class MyApp extends StatelessWidget {
 
             LayoutBuilder(
                 builder: (_, constraints) {
+                  // BoxConstraints(0.0<=w<=Infinity, 0.0<=h<=800.0)
                   print(constraints);
                   return Container(
                     color: Colors.yellow,

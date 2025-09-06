@@ -36,6 +36,8 @@ class VerticalDirectionFlex extends StatelessWidget {
     style: TextStyle(fontSize: 30, backgroundColor: Colors.green),
   );
 
+  const VerticalDirectionFlex({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
