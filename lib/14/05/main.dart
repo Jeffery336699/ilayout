@@ -1,5 +1,6 @@
 import 'package:dash_painter/dash_painter.dart';
 import 'package:flutter/material.dart';
+import 'package:ilayout/ext.dart';
 import 'package:wrapper/wrapper.dart';
 
 import 'model/time_node.dart';
@@ -9,6 +10,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -101,7 +104,7 @@ class TimeLineNode extends StatelessWidget {
           const Spacer(flex: 2)
         ],
       ),
-    );
+    ).border();
   }
 
   Widget _buildDecoration() => Container(

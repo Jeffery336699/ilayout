@@ -7,6 +7,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -156,6 +158,8 @@ class DashBoxPainter extends BoxPainter {
     canvas.save();
     final Paint paint = Paint()..style = PaintingStyle.stroke;
     final Path path = Path();
+    // offset = Offset(20.0, 46.0), size = Size(20.0, 222.0)
+    print('offset = $offset, size = ${configuration.size}');
     canvas.translate(
       offset.dx,
       offset.dy,
